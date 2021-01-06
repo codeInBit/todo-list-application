@@ -17,7 +17,7 @@ class ItemResource extends JsonResource
         return [
             'id' => $this->id,
             'name' => $this->name,
-            'is_complete' => $this->is_complete,
+            'is_complete' => (boolean) $this->is_complete,
             'created_date' => $this->created_at ? (string) $this->created_at->toDateString() : null,
         ];
     }

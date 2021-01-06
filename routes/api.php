@@ -18,4 +18,8 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
     return $request->user();
 });
 
-Route::resource('tasks', API\TaskController::class);
+Route::resource('tasks', 'API\TaskController');
+
+Route::post('tasks/{task}/items', 'API\ItemController@store');
+Route::put('tasks/{task}/items/{item}', 'API\ItemController@update');
+Route::delete('tasks/{task}/items/{item}', 'API\ItemController@destroy');

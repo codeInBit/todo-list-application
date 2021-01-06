@@ -17,7 +17,7 @@ class TaskController extends Controller
      */
     public function index()
     {
-        $task = Task::paginate(10);
+        $task = Task::latest()->paginate(10);
         $response = TaskResource::collection($task)->response()->getData(true);
 
         return $this->successResponse($response, "Fetched all doto task", Response::HTTP_OK);
@@ -64,13 +64,9 @@ class TaskController extends Controller
         $validatedData = $request->validate([
             'name' => 'required',
         ]);
-        
-        $task = $task->update([
-            'name' => $request->name,
-        ]);
-        $response = new TaskResource($task);
+        $task = $task->update($request->all());
 
-        return $this->successResponse($response, "Task name has been updated", Response::HTTP_OK);
+        return $this->successResponse(null, "Task name has been updated", Response::HTTP_OK);
     }
 
     /**

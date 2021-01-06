@@ -18,7 +18,7 @@ class CreateItemsTable extends Migration
             $table->uuid('task_id')->nullable();
             $table->foreign('task_id')->references('id')->on('tasks')->onDelete('cascade');
             $table->string('name');
-            $table->boolean('is_complete');
+            $table->boolean('is_complete')->default(false);
             $table->softDeletes();
             $table->timestamps();
         });

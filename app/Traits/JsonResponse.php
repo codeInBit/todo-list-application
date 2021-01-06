@@ -7,7 +7,7 @@ use App\Helpers\FailMail;
 use Exception;
 use App\Helpers\DatatableForResource;
 
-trait JSONResponse
+trait JsonResponse
 {
     public function successResponse($data, $message = "Operation Successful", $statusCode = Response::HTTP_OK)
     {
