@@ -21,3 +21,6 @@ This project was built with Laravel PHP and PHPCS and PHPStan are setup and conf
 - If .env file diesn't exist, run the command *cp .env.example .env*
 - In the .env file, update the necessary information to allow connection to a database
 - Run the command *php artisan migrate*
+
+
+The [Postman collection](https://documenter.getpostman.com/view/13007176/TVzNHKUZ) for this project contains sample request and also sample responces to better understand the endpoint.
