@@ -1,17 +1,19 @@
 ## Todo List Application
 
-This Postman collection consist of all endpoints for a todo list application.
+This Project consist of all endpoints for a todo list application.
 
-The todo application as a simple replica of *GOOGLE KEEP*, where:
+The todo application is a simple replica of *GOOGLE KEEP*, where:
 
-- A user can open a todo task by writing a title and then highlighting all items under the task.
+- A user can begin a todo task by writing a title and then highlighting all items under the task.
 - A user can mark an item under a particular Task as completed or otherwise.
 
 ## Technology
-This project was built with Laravel PHP and PHPCS and PHPStan are setup and configured in the codebase as static analysis tool to ensure clean code, good code quality and uniform standards across the codebase.
+This project was built with Laravel PHP while PHPCS and PHPStan are setup and configured in the codebase as static analysis tool to ensure clean, good code quality and uniform standards across the codebase.
 
-- To run PHPCS configuration against the codebase, run the comman *./vendor/bin/phpcs *
-- To run PHPStan configuration against the codebase, run the comman *./vendor/bin/phpstan analyse*
+Github Actions is also setup and configured on the code base to handle continous integration, when ever a push is made to master or pull request is made for feature, Github Actions checks the codebase against some set of rules (some of which is PHPCS and PHPStan) and passes if everything is fine and if otherwise, it fails.
+
+- To run PHPCS configuration against the codebase locally, run the command *./vendor/bin/phpcs *
+- To run PHPStan configuration against the codebase locally, run the command *./vendor/bin/phpstan analyse*
 
 
 ## Installation
@@ -23,4 +25,4 @@ This project was built with Laravel PHP and PHPCS and PHPStan are setup and conf
 - Run the command *php artisan migrate*
 
 
-The [Postman collection](https://documenter.getpostman.com/view/13007176/TVzNHKUZ) for this project contains sample request and also sample responces to better understand the endpoint.
+The [POSTMAN COLLECTION](https://documenter.getpostman.com/view/13007176/TVzNHKUZ) for this project contains sample request and also sample responces to better understand the endpoint.
