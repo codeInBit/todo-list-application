@@ -32,4 +32,4 @@ Github Actions is also setup and configured on the code base to handle continous
 
 The [POSTMAN COLLECTION](https://documenter.getpostman.com/view/13007176/TVzNHKUZ) for this project contains sample request and also sample responces to better understand the endpoint.
 
-![alt text](https://github.com/[username]/[reponame]/blob/[branch]/image.jpg?raw=true)
+![Entity Relational Diagram (DB Structure)](https://github.com/codeInBit/todo-list-application/blob/master/Entity-Relational%20Diagram.png)
